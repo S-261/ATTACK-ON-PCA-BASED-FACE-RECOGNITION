@@ -1,4 +1,4 @@
-# Error In Zhang et al Facial Algorithm Algorithm
+# Error In Zhang et al Facial Algorithm
 
 ## Overview
 
