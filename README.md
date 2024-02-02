@@ -22,7 +22,7 @@ To address this issue, a workable fix is provided to ensure the functionality of
 
 Our investigation into Zhang et al.'s face recognition protocol revealed a critical vulnerability. We discovered that the distorted pair ($\widetilde{\mathbf{Y}'}$, $\mathbf{\Lambda}'$) successfully passed the verification process without detection. This attack had significant repercussions on the face recognition protocol, leading to incorrect outputs upon modifications. Notably, Zhang et al. did not mention or conduct experiments with any facial dataset.
 
-To experimentally demonstrate our attack, we utilized the Celebrity Faces dataset from Kaggle, accessible [here](https://www.kaggle.com/code/jiaowoguanren/celebrity-face-image-dataset-tensorflow/input). After obtaining the Covariance matrix $\mathbf{S}$, we encrypted $\mathbf{S}$ using Zhang et al.'s protocol and computed the eigendecomposition of the encrypted matrix $\mathbf{U1}$ as explained in Section \ref{sec:algofix}.
+To experimentally demonstrate our attack, we utilized the Celebrity Faces dataset from Kaggle, accessible [here](https://www.kaggle.com/code/jiaowoguanren/celebrity-face-image-dataset-tensorflow/input). After obtaining the Covariance matrix $\mathbf{S}$, we encrypted $\mathbf{S}$ using Zhang et al.'s protocol and computed the eigendecomposition of the encrypted matrix $\mathbf{U1}$.
 
 ## Experimental Validation
 
@@ -32,11 +32,15 @@ Assuming no manipulation by the cloud in the decomposition, correct decompositio
 
 ### Testing with a Test Image $\mathbf{x}$
 
-We use a test image $\mathbf{x}$ to validate the algorithm. In this instance, we selected an image of *Tom Hanks*, not included in our training image set used to construct $\mathbf{A}$. Applying the same transformations used to generate $\mathbf{W}$ from $\mathbf{A}$, we find the closest column vector for recognition.
+We use a test image $\mathbf{x}$ to validate the algorithm. In this instance, we selected an image of *Tom Hanks*, not included in our training image set used to construct $\mathbf{A}$. Applying the same transformations used to generate $\mathbf{W}$ from $\mathbf{A}$, we find the closest column vector for recognition. Without the **CHEATING**, the image is properly detected as *Tom Hanks*.
 
 ### Alarming Results
 
 After modifications, we detected *Tom Hanks*'s image being recognized as *Scarlett Johannson*. This underscores the efficacy of our proposed **CHEATING** method and highlights the ineffectiveness of Zhang et al.'s verification scheme.
+
+### Proposing New Verification Scheme
+
+For robust verifiability, a new verification scheme has been proposed and shown to withstand the aforementioned **CHEATING**.
 
 ## GitHub README Usage
 
