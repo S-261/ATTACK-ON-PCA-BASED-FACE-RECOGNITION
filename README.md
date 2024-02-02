@@ -36,7 +36,7 @@ We use a test image $\mathbf{x}$ to validate the algorithm. In this instance, we
 
 ### Alarming Results
 
-After modifications, we detected *Tom Hanks*'s image being recognized as *Scarlett Johannson*. This underscores the efficacy of our proposed **CHEATING** method and highlights the ineffectiveness of Zhang et al.'s verification scheme.
+After modifications, we detected *Tom Hanks*'s image being recognized as *Brad Pitt*. This underscores the efficacy of our proposed **CHEATING** method and highlights the ineffectiveness of Zhang et al.'s verification scheme.
 
 ### Proposing New Verification Scheme
 
