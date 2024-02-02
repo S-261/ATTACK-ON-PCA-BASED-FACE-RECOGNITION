@@ -1,8 +1,8 @@
-# Face Recognition Zhang et al Error
+# Error In Zhang et al Facial Algorithm Algorithm
 
 ## Overview
 
-This document addresses issues related to Face Recognition as described by Zhang et al. In the provided Python implementation, we explore a crucial point where the client successfully computes the covariance matrix \( \mathbf{S} = \frac{1}{m}\mathbf{AA}^T \). Subsequently, Eigenvalue Decomposition (ED) is performed on \( \widetilde{\mathbf{U}} \). The existence of the ED of \( \widetilde{\mathbf{U}} \) implies that the norm \( \left\lVert \widetilde{\mathbf{U}} - \widetilde{\mathbf{Y}}\mathbf{\Lambda}\widetilde{\mathbf{Y}}^T \right\rVert \) should be negligible.
+This document addresses issues related to Face Recognition as described by Zhang et al. In the provided Python implementation, we explore a crucial point where the client successfully computes the covariance matrix The expression \( \mathbf{S} = \frac{1}{m}\mathbf{AA}^T \) is used. Subsequently, Eigenvalue Decomposition (ED) is performed on \( \widetilde{\mathbf{U}} \). The existence of the ED of \( \widetilde{\mathbf{U}} \) implies that the norm \( \left\lVert \widetilde{\mathbf{U}} - \widetilde{\mathbf{Y}}\mathbf{\Lambda}\widetilde{\mathbf{Y}}^T \right\rVert \) should be negligible.
 
 ## Preprocessing
 
